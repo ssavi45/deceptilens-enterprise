@@ -20,6 +20,7 @@
 html, body {
   overflow-x: hidden;
   max-width: 100%;
+  scroll-padding-top: 6.5rem;
 }
 
 body {
@@ -246,6 +247,7 @@ nav.desktop-nav a:hover {
 .content-section {
   padding: 6rem 0;
   border-top: 1px solid var(--grid-color);
+  scroll-margin-top: 6.5rem;
 }
 
 .alternate-bg {
@@ -429,6 +431,7 @@ nav.desktop-nav a:hover {
   padding: 8rem 0;
   position: relative;
   border-top: 1px solid #222;
+  scroll-margin-top: 6.5rem;
 }
 
 /* Subtle dark diagonal lines pattern */
@@ -854,6 +857,10 @@ footer {
 }
 
 @media (max-width: 520px) {
+  html, body {
+    scroll-padding-top: 10rem;
+  }
+
   .container {
     padding: 7.25rem 1rem 0;
   }
@@ -862,6 +869,11 @@ footer {
     top: 0.5rem;
     width: calc(100% - 2rem);
     padding: 0.75rem;
+  }
+
+  .content-section,
+  .dark-section {
+    scroll-margin-top: 10rem;
   }
 
   .logo {
