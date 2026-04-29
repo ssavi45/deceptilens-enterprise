@@ -66,16 +66,16 @@ header {
   align-items: center;
   gap: 1.5rem;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.18)),
-    rgba(255, 255, 255, 0.12);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.94);
   box-shadow:
-    0 18px 42px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.46);
-  backdrop-filter: blur(26px) saturate(180%);
-  -webkit-backdrop-filter: blur(26px) saturate(180%);
+    0 18px 42px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
 }
 
 .logo {
