@@ -31,6 +31,10 @@ function App() {
     }
   };
 
+  const scrollToDeploymentProcess = () => {
+    document.getElementById('onboarding')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <div className="grid-background" />
@@ -47,6 +51,9 @@ function App() {
             <a href="#pricing">Pricing</a>
           </nav>
           <div className="nav-actions">
+            <a href="https://deceptilens.streamlit.app/" target="_blank" rel="noreferrer" className="btn btn-outline btn-nav">
+              Try Demo
+            </a>
             <button className="btn btn-primary" onClick={() => setContactModalOpen(true)}>Contact</button>
           </div>
         </header>
@@ -67,8 +74,8 @@ function App() {
                 Upload interview, trial, or statement videos and receive an AI-assisted deception-risk report with model confidence, per-model probabilities, and transparent feature-level explanations.
               </p>
               <div className="hero-actions">
-                <button className="btn btn-primary" onClick={() => setContactModalOpen(true)}>
-                  Start Creating <ArrowRight size={16} />
+                <button className="btn btn-primary" onClick={scrollToDeploymentProcess}>
+                  View Delivery Process <ArrowRight size={16} />
                 </button>
                 <a href="https://deceptilens.streamlit.app/" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -203,45 +210,48 @@ function App() {
           <section id="pricing" className="content-section">
             <div className="section-header">
               <h2>Enterprise Licensing</h2>
-              <p>Flexible deployment options tailored to your operational requirements.</p>
+              <p>Clear delivery packages for pilots, private deployments, and managed enterprise support.</p>
             </div>
             <div className="pricing-grid">
               <div className="pricing-card">
                 <h3>Proof of Concept</h3>
-                <div className="price">Pilot</div>
-                <p className="price-desc">Low-risk validation for your specific operational environment.</p>
+                <div className="price">$2,500</div>
+                <div className="price-meta">one-time pilot setup</div>
+                <p className="price-desc">A focused validation engagement using your sample video environment before full deployment.</p>
                 <ul className="pricing-features">
                   <li>30-day trial period</li>
-                  <li>Basic model fine-tuning</li>
-                  <li>Standard cross-domain evaluation</li>
-                  <li>Performance validation report</li>
+                  <li>Up to 50 representative video clips</li>
+                  <li>Baseline model calibration</li>
+                  <li>Performance and risk-readiness report</li>
                 </ul>
-                <button className="btn btn-outline w-full mt-auto" onClick={() => setContactModalOpen(true)}>Request Custom Model</button>
+                <button className="btn btn-outline w-full mt-auto" onClick={() => setContactModalOpen(true)}>Request Pilot</button>
               </div>
               <div className="pricing-card">
-                <h3>Perpetual License</h3>
-                <div className="price">One-Time</div>
-                <p className="price-desc">Outright ownership of your specialized behavioral model.</p>
+                <h3>Private Deployment</h3>
+                <div className="price">$18,000</div>
+                <div className="price-meta">starting one-time license</div>
+                <p className="price-desc">A dedicated DeceptiLens deployment configured for your internal review workflow.</p>
                 <ul className="pricing-features">
-                  <li>Deep custom model fine-tuning</li>
-                  <li>On-premise deployment package</li>
-                  <li>Full data sovereignty</li>
-                  <li>Lifetime local inference usage</li>
+                  <li>Custom model fine-tuning</li>
+                  <li>Private cloud or on-premise package</li>
+                  <li>Admin dashboard and exportable reports</li>
+                  <li>30 days of launch support included</li>
                 </ul>
-                <button className="btn btn-outline w-full mt-auto" onClick={() => setContactModalOpen(true)}>Request Custom Model</button>
+                <button className="btn btn-outline w-full mt-auto" onClick={() => setContactModalOpen(true)}>Request Deployment</button>
               </div>
               <div className="pricing-card popular">
                 <div className="popular-badge">Comprehensive</div>
                 <h3>Managed Enterprise</h3>
-                <div className="price">License + SLA</div>
-                <p className="price-desc">Turnkey solution with continuous model optimization and support.</p>
+                <div className="price">$4,500/mo</div>
+                <div className="price-meta">plus deployment license</div>
+                <p className="price-desc">Ongoing managed operation for organizations that need monitoring, updates, and priority support.</p>
                 <ul className="pricing-features">
-                  <li>Everything in Perpetual License</li>
+                  <li>Everything in Private Deployment</li>
                   <li>Monthly maintenance & monitoring</li>
                   <li>Quarterly model retraining updates</li>
-                  <li>24/7 dedicated engineering SLA</li>
+                  <li>Priority engineering SLA</li>
                 </ul>
-                <button className="btn btn-primary w-full mt-auto" onClick={() => setContactModalOpen(true)}>Request Custom Model</button>
+                <button className="btn btn-primary w-full mt-auto" onClick={() => setContactModalOpen(true)}>Talk to Sales</button>
               </div>
             </div>
           </section>
